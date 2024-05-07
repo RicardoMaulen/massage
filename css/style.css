@@ -1,0 +1,271 @@
+/* ******************************** EMPORT *************************************************** */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap");
+
+/* ******************************** RESET STYLES ********************************************* */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* *************************** CUSTOM PROPERTIES(variables) ********************************** */
+:root {
+  /* color */
+  --first-color: rgb(117, 133, 103);
+  --first-alpha-color: rgb(117, 200, 103, 0.75);
+
+  --second-color: rgb(252, 210, 103);
+  --second-alpha-color: rgb(252, 210, 103, 0.75);
+
+  --third-color: rgb(78, 83, 72);
+  --third-alpha-color: rgb(78, 83, 72, 0.75);
+
+  --link-color: rgb(80, 158, 227);
+
+  --bg-primary-color: rgb(117, 200, 103);
+  --bg-color: rgb(245, 245, 245);
+  --bg-alpha-color: rgb(245, 245, 245, 0.75);
+
+  --bg-color-deg: rgb();
+  --bg-alpha-color-deg: rgb();
+
+  --color-clear: rgb();
+  --color-dark: rgb();
+
+  /* <!-- font-size --> */
+  --fs-h1: 3rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 2rem;
+  --fs-h4: 1.5rem;
+  --fs-h5: 1.3rem;
+  --fs-h6: 1.2rem;
+}
+
+/* ***************************** STYLES GENERAL **************************************** */
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    180deg,
+    var(--first-alpha-color) 60%,
+    var(--first-color)
+  );
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: bold;
+  color: var(--third-color);
+}
+h2 {
+  font-size: var(--fs-h2);
+  color: var(--third-color);
+}
+h3 {
+  font-size: var(--fs-h3);
+  color: var(--third-color);
+}
+h4 {
+  font-size: var(--fs-h4);
+  color: var(--third-color);
+}
+h5 {
+  font-size: var(--fs-h5);
+  color: var(--third-color);
+}
+h6 {
+  font-size: var(--fs-h6);
+  color: var(--third-color);
+}
+
+iframe {
+  width: 100%;
+  min-height: 400px;
+}
+
+button {
+  display: inline-block;
+  color: var(--link-color);
+  margin: 10px auto;
+}
+
+button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contenedor {
+  display: flex;
+}
+
+/* ***************** BOOTSTRAP STYLE **************************************** */
+
+/* menu */
+nav {
+  background-color: #fff;
+}
+
+header img {
+  width: 20%;
+}
+
+.third-color {
+  color: var(--third-color);
+}
+
+.nav-link {
+  color: var(--first-color);
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: var(--bg-primary-color);
+}
+
+/* CARUSEL */
+.carousel {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 2rem;
+}
+
+/* prestations */
+
+.card-body button {
+  position: absolute;
+}
+
+/* ***************** My Styles (creado por mi) ****************************** */
+.acti {
+  color: var(--bg-primary-color);
+}
+
+.bg-second-alpha {
+  background-color: var(--second-alpha-color);
+}
+
+.border-letf {
+  border-left: 2px solid var(--second-alpha-color);
+  padding-left: 8px;
+}
+
+.first-alpha-color {
+  background-color: var(--first-alpha-color);
+  padding: 0 2rem;
+  box-shadow: 2px 0px 10px var(--first-color);
+}
+
+nav .navbar-brand {
+  max-width: 300px;
+}
+
+.navbar-logo {
+  width: "180";
+  height: "100";
+}
+
+.d-fle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.h1-modifie {
+  font-size: 2rem;
+  color: var(--first-color);
+  letter-spacing: 3px;
+}
+/* federation */
+#federation {
+  background-color: rgb(117, 200, 103, 0.75);
+  box-shadow: 2px 0px 6px rgb(117, 133, 103);
+}
+.img-fd {
+  width: 200px;
+  height: auto;
+}
+
+.text-certifie {
+  color: #fff;
+  margin-top: 1rem;
+}
+
+article h3 {
+  color: #fff !important;
+  letter-spacing: 3px;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+  nav .navbar {
+  }
+  .contenedor-logo-menu {
+    position: relative;
+    min-height: 80px;
+  }
+  .h1-modifie {
+    display: none;
+  }
+  .navbar-logo {
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    display: block;
+    width: 70px;
+    height: 70px;
+  }
+  .navbar-toggler {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  /* about */
+  #about h1 {
+    font-size: 1.5em;
+  }
+
+  /* service */
+  #prestations h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  #prestations h2 {
+    font-size: 24px;
+  }
+
+  /* contact */
+  #contact h2 {
+    font-size: 24px;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) {
+  .d-fle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-logo {
+    margin-left: -1.5rem;
+  }
+  .h1-modifie {
+    font-size: 1.5rem;
+  }
+  .navbar-toggler {
+    margin-right: 1.5rem;
+  }
+}
+@media (width: 992px) {
+  .h1-modifie {
+    font-size: 1.5rem;
+  }
+}
